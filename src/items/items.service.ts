@@ -20,8 +20,12 @@ export class ItemsService {
 
   }
 
-  findAll() {
-    return [];
+  async findAll(): Promise<Item[]> {
+
+    //TODO: filtrar, paginar, por usuario...
+
+    return this.itemsRepository.find();
+
   }
 
   findOne(id: number) {
